@@ -56,7 +56,7 @@ function confettiBurst(x, y) {
 function startFalling() {
     setInterval(() => {
         const img = document.createElement("img");
-        img.src = "images/me.jpg";
+        img.src = "HVD3/images/me.jpg";
         img.className = "fall-img";
 
         const size = Math.random() * 15 + 35; // smaller
@@ -69,5 +69,6 @@ function startFalling() {
         setTimeout(() => img.remove(), 8000);
     }, 500);
 }
+
 
 startFalling();
