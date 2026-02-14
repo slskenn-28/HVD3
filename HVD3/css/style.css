@@ -1,0 +1,159 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    height: 100vh;
+    background: linear-gradient(135deg, #0f4c81, #4da8da, #89c2d9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* MAIN CONTAINER */
+.container {
+    background: rgba(255,255,255,0.95);
+    padding: 32px;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    z-index: 10;
+}
+
+h1 {
+    color: #1e90ff;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+/* INPUT */
+.love-input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 18px;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* BUTTONS */
+.buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 30px;
+    padding: 12px 26px;
+    transition: 0.3s ease;
+}
+
+/* YES BUTTON */
+.btn-yes {
+    background: linear-gradient(135deg, #1e90ff, #63b3ff);
+    color: white;
+    box-shadow: 0 8px 18px rgba(30,144,255,0.4);
+}
+
+.btn-yes:hover {
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* NO BUTTON */
+.btn-no {
+    background: #eef3fa;
+    color: #555;
+}
+
+/* RESULT */
+#result {
+    margin-top: 18px;
+    font-size: 20px;
+    color: #1e90ff;
+    display: none;
+}
+
+/* PAGES */
+.page {
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f4c81, #4da8da, #89c2d9);
+    z-index: 15;
+}
+
+.page-box {
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    border-radius: 24px;
+    width: 90%;
+    max-width: 380px;
+    text-align: center;
+}
+
+/* NAV BUTTONS */
+.nav-btn {
+    background: linear-gradient(135deg, #1e90ff, #63b3ff);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 25px;
+    margin: 8px;
+}
+
+.nav-btn.outline {
+    background: transparent;
+    border: 2px solid #1e90ff;
+    color: #1e90ff;
+}
+
+/* GALLERY */
+.gallery img {
+    width: 65px;
+    height: 65px;
+    border-radius: 14px;
+    object-fit: cover;
+    margin: 6px;
+}
+
+/* FLOATING BUBBLES (SMALLER & SOFTER) */
+.fall-img {
+    position: fixed;
+    top: -60px;
+    border-radius: 50%;
+    opacity: 0.7;
+    filter: blur(0.5px);
+    box-shadow: 0 0 10px rgba(255,255,255,0.6);
+    pointer-events: none;
+    z-index: 5;
+}
+
+@keyframes bubbleFall {
+    from { transform: translateY(-10vh) scale(0.8); }
+    to { transform: translateY(110vh) scale(1); opacity: 0; }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+    h1 { font-size: 22px; }
+    .container { padding: 26px; }
+}
